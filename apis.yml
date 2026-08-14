@@ -1,0 +1,42 @@
+name: makeBIMI
+description: >-
+  A free public REST API that validates a publicly reachable SVG file against the SVG Tiny Portable/Secure (P/S) profile
+  used for BIMI logo files, checking XML/SVG structure and W3C SVG Tiny P/S (RFC 9345) requirements.
+url: https://makebimi.apievangelist.com/apis.yml
+created: '2026-08-14'
+modified: '2026-08-14'
+specificationVersion: '0.21'
+tags:
+  - BIMI
+  - DMARC
+  - email authentication
+  - SVG
+  - brand indicators
+  - SVG validation
+apis:
+  - name: makeBIMI SVG Tiny P/S Validation API
+    description: >-
+      Single unauthenticated GET /api/validate endpoint that fetches a publicly reachable SVG over HTTPS and returns a
+      detailed SVG Tiny P/S validation report.
+    humanURL: https://makebimi.com/api-docs
+    baseURL: https://makebimi.com
+    tags:
+      - BIMI
+      - DMARC
+      - email authentication
+      - SVG
+      - brand indicators
+      - SVG validation
+    properties:
+      - type: OpenAPI
+        url: https://makebimi.com/public/openapi.yaml
+      - type: Documentation
+        url: https://makebimi.com/api-docs
+maintainers:
+  - FN: makeBIMI
+    url: https://makebimi.com
+generated:
+  by: apis.io/add
+  model: claude-opus-4-8
+  confidence: 95
+  at: '2026-08-14T07:59:42.989Z'
