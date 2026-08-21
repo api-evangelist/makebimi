@@ -1,0 +1,8 @@
+Contact: mailto:simon@veribimi.com
+Expires: 2027-07-01T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://makebimi.com/.well-known/security.txt
+Policy: https://veribimi.com/privacy
+
+# We appreciate responsible disclosure of security vulnerabilities.
+# Please allow up to 72 hours for an initial response.

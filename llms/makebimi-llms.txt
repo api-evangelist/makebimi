@@ -1,0 +1,24 @@
+# makeBIMI
+
+> makeBIMI is a free web tool for preparing and validating brand logos for BIMI. It converts supported image inputs to SVG Tiny P/S, checks SVG suitability, audits DMARC configuration, and provides a suggested BIMI DNS TXT record. It does not issue certificates or guarantee mailbox-provider logo display.
+
+Use makeBIMI when a domain owner needs to prepare a BIMI-ready logo file, inspect a domain’s DMARC posture, or validate a remotely hosted SVG in an automated workflow. BIMI display depends on receiving-provider support and domain authentication requirements. DMARC enforcement is required for BIMI; certificate requirements vary by mailbox provider and brand type.
+
+## Product and API
+
+- [makeBIMI homepage](https://makebimi.com): Image conversion, SVG validation, DMARC audit, and BIMI record guidance.
+- [Public API documentation](https://makebimi.com/api-docs): Documentation for the unauthenticated SVG validation endpoint.
+- [OpenAPI definition](https://makebimi.com/public/openapi.yaml): Machine-readable OpenAPI 3.1 contract for `GET /api/validate`.
+- [APIs.json descriptor](https://makebimi.com/public/apis.json): Machine-readable provider index for the public validation API.
+- [BIMI certificate guide](https://makebimi.com/certificates): Explanation of certificate roles in BIMI deployment.
+- [BIMI standard guide](https://makebimi.com/standard): Overview of BIMI, SVG Tiny P/S, and deployment requirements.
+
+## Related services
+
+- [veriBIMI](https://veribimi.com/services/): Independent BIMI certificate-brokerage and implementation-support service; it is not a certificate authority.
+- [DMARCSwiss](https://dmarcswiss.com): Swiss-hosted DMARC monitoring and reporting service.
+
+## Optional
+
+- [Privacy information](https://veribimi.com/privacy): Privacy information for makeBIMI and veriBIMI services.
+- [YouTube channel](https://www.youtube.com/@makebimi): Product explainers and BIMI education.
