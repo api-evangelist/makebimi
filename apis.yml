@@ -26,12 +26,11 @@ modified: '2026-08-21'
 specificationVersion: '0.23'
 tags:
 - BIMI
-- Email Authentication
 - DMARC
-- Email Deliverability
+- email authentication
 - SVG
-- Brand Indicators
-- Validation
+- brand indicators
+- SVG validation
 tags_raw:
 - BIMI
 - DMARC
