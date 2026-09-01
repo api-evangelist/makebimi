@@ -27,7 +27,7 @@ specificationVersion: '0.23'
 tags:
 - BIMI
 - DMARC
-- email authentication
+- Email Authentication
 - SVG
 - brand indicators
 - SVG validation
