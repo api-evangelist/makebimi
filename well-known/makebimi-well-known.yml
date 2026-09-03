@@ -1,0 +1,51 @@
+generated: '2026-09-03'
+method: probed
+source: live probes of makebimi.com, www.makebimi.com and veribimi.com (curl, desktop Chrome user-agent)
+note: >-
+  makebimi.com sits behind a Cloudflare managed challenge: every page and API path returns
+  HTTP 403 with cf-mitigated: challenge, but Cloudflare exempts robots.txt, llms.txt and
+  /.well-known/* — so the .well-known probes below are honest origin answers, not challenge
+  noise. /.well-known/security.txt is a real served RFC 9116 document on both makebimi.com
+  and veribimi.com (same operator, same contact); every other well-known path 404s.
+  www.makebimi.com fails TLS between Cloudflare and the origin (HTTP 525) on every path.
+hosts:
+- host: makebimi.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: security/makebimi-security.txt
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /robots.txt
+    status: 200
+    file: well-known/makebimi-robots.txt
+  - path: /llms.txt
+    status: 200
+    file: llms/makebimi-llms.txt
+- host: www.makebimi.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 525
+  - path: /robots.txt
+    status: 525
+- host: veribimi.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: well-known/makebimi-veribimi-security.txt
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /robots.txt
+    status: 200

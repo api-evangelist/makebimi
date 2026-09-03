@@ -1,0 +1,23 @@
+generated: '2026-09-03'
+method: searched
+source: https://makebimi.com/llms.txt
+docs: null
+plan_count: 1
+plans:
+- name: Free
+  price: 0
+  currency: null
+  billing_period: null
+  included_quota: null
+  overage: null
+  limits: null
+  note: >-
+    The provider's own llms.txt describes makeBIMI as "a free web tool for preparing and
+    validating brand logos for BIMI", and the public SVG validation API (GET /api/validate)
+    as unauthenticated. No paid tiers are declared anywhere reachable.
+note: >-
+  There is no dedicated pricing page to read: every makebimi.com page is behind a Cloudflare
+  managed challenge (HTTP 403, cf-mitigated: challenge). The single free plan recorded here is
+  the provider's own declaration in llms.txt, one of the three first-party documents Cloudflare
+  exempts. Paid BIMI certificate brokerage is sold separately under the sibling veriBIMI brand,
+  not as a makeBIMI plan.

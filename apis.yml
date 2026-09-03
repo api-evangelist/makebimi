@@ -21,8 +21,19 @@ deliveryModel:
   - none
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-09-02'
+  method: derived
 created: '2026-08-21'
-modified: '2026-08-21'
+modified: '2026-09-03'
 specificationVersion: '0.23'
 tags:
 - BIMI
@@ -59,6 +70,16 @@ apis:
   - type: APIsJSON
     url: https://makebimi.com/public/apis.json
 common:
+- type: WellKnown
+  url: well-known/makebimi-well-known.yml
+- type: SecurityTxt
+  url: security/makebimi-security.txt
+- type: Plans
+  url: plans/makebimi-plans-pricing.yml
+- type: VulnerabilityDisclosure
+  url: security/makebimi-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/makebimi-domain-security.yml
 - type: LLMsTxt
   url: llms/makebimi-llms.txt
 - type: SecurityPolicy
@@ -94,3 +115,29 @@ x-provenance:
     fetched, so neither is verified. The artifacts are HIDDEN, not absent.
     Note the contradiction, which is the provider's to resolve: robots.txt says `Allow: /` for
     every user-agent and advertises a sitemap that is itself 403.
+x-enrichment:
+  date: '2026-09-03'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v2
+x-coverage:
+  state: blocked
+  reason: bot-challenge
+  detail: >-
+    A Cloudflare managed challenge (HTTP 403, cf-mitigated: challenge) answers for every
+    makebimi.com page and API path — including the provider's own declared OpenAPI at
+    /public/openapi.yaml, the APIs.json at /public/apis.json, /api-docs and GET /api/validate
+    itself — leaving only the Cloudflare-exempt robots.txt, llms.txt and /.well-known/* paths
+    readable; the artifacts are hidden, not absent.
+  evidence:
+  - url: https://makebimi.com/public/openapi.yaml
+    status: 403
+  - url: https://makebimi.com/public/apis.json
+    status: 403
+  - url: https://makebimi.com/api-docs
+    status: 403
+  - url: https://makebimi.com/.well-known/security.txt
+    status: 200
+  - url: https://makebimi.com/llms.txt
+    status: 200
+  checked: '2026-09-03'
