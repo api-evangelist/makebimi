@@ -57,7 +57,6 @@ apis:
     (SVG Tiny P/S). Described by the provider's own llms.txt as "the unauthenticated SVG
     validation endpoint", contract GET /api/validate.
   humanURL: https://makebimi.com/api-docs
-  baseURL: https://makebimi.com
   tags:
   - BIMI
   - Validation
