@@ -69,6 +69,8 @@ apis:
   - type: APIsJSON
     url: https://makebimi.com/public/apis.json
 common:
+- type: Pricing
+  url: https://makebimi.com/llms.txt
 - type: WellKnown
   url: well-known/makebimi-well-known.yml
 - type: SecurityTxt
